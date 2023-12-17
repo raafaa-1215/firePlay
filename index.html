@@ -1,1 +1,67 @@
 <!-- Página principal -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>FirePlay</title>
+
+    <link rel="stylesheet" href="css/index.css">
+
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script>
+        $(function() {
+            $("#header").load("header.html");
+            $("#footer").load("footer.html");
+        });
+    </script>
+</head>
+<body>
+    <div id="header"></div>
+
+    <div class="body">
+        <div class="searchBar">
+            <form action="">
+                <input type="text" name="searchBar" id="searchBar" placeholder="Search for a game ...">
+                <button><img src="/images/search.png" width="20px" height="20px"></button>
+            </form>
+        </div>
+
+        <div class="jogos">
+            <div class="card">
+                <img src="images/lol_card.jpg" alt="League of Legends">
+            </div>
+            <div class="card">
+                <img src="images/cs2_card.jpg" alt="Counter Strike 2">
+            </div>
+            <div class="card">
+                <img src="images/rainbow6_card.jpg" alt="Rainbow Six Siege">
+            </div>
+            <div class="card">
+                <img src="images/minecraft_card.png" alt="Minecraft">
+            </div>
+            <div class="card">
+                <img src="images/btd6_card.jpg" alt="Bloons TD 6">
+            </div>
+            <div class="card">
+                <img src="images/terraria_card.jpg" alt="Terraria">
+            </div>
+            <div class="card">
+                <img src="images/gd_card.jpg" alt="Geometry Dash">
+            </div>
+            <div class="card">
+                <img src="images/cities-skylines_card.jpg" alt="Cities Skylines">
+            </div>
+            <div class="card">
+                <img src="images/apex-legends_card.jpg" alt="Apex Legends">
+            </div>
+            <div class="card">
+                <img src="images/elden-ring_card.jpg" alt="Elden Ring">
+            </div>
+        </div>
+    </div>
+
+    <div id="footer"></div>
+</body>
+</html>

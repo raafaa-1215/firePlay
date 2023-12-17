@@ -1,0 +1,63 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+body {
+    width: 100%;
+    background-color: #F45D00;
+}
+
+.body {
+    min-height: 80vh;
+}
+
+.searchBar {
+    width: 100%;
+    padding: 5em 0;
+    display: flex;
+    justify-content: center;
+}
+
+.searchBar form {
+    display: flex;
+}
+
+.searchBar form input {
+    min-width: 600px;
+    padding: 1em 2em;
+    border: none;
+    border-radius: 50px 0 0 50px;
+    background-color: white;
+}
+
+.searchBar form button {
+    padding: 1em 2em;
+    border: none;
+    border-radius: 0 50px 50px 0;
+    background-color: white;
+}
+
+.jogos {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.card {
+    width: 18%;
+    margin-bottom: 2em;
+    transition-duration: 0.3s;
+}
+
+.card img {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
