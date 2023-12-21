@@ -1,12 +1,26 @@
 <!DOCTYPE html>
-<html lang="pt">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Counter-strike 2</title>
+    <title>User Rating System</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    
+
+<h1>User Rating System</h1>
+
+<div class="rating" id="rating" onclick="handleRating(event)">
+    <span class="star" data-value="1">&#9733;</span>
+    <span class="star" data-value="2">&#9733;</span>
+    <span class="star" data-value="3">&#9733;</span>
+    <span class="star" data-value="4">&#9733;</span>
+    <span class="star" data-value="5">&#9733;</span>
+</div>
+
+<div id="average-rating">Average Rating: <span id="average">0</span></div>
+
+<script src="Js/script.js"></script>
 
 </body>
 </html>

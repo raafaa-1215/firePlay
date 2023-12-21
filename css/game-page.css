@@ -1,0 +1,27 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+h1 {
+    color: #333;
+}
+
+.rating {
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.star {
+    color: #ddd;
+}
+
+.star:hover,
+.star.active {
+    color: #ffcc00;
+}
+
+#average-rating {
+    margin-top: 20px;
+    font-size: 18px;
+}
