@@ -14,10 +14,32 @@ footer {
     justify-content: space-around;
 }
 
-.autores h2, .local h2 {
+footer h2 {
     margin-bottom: 20px;
 }
 
-.autores h4, .local h4 {
+footer h4 {
     margin-bottom: 5px;
+    color: black;
+}
+
+.rateUs {
+    display: flex;
+    flex-direction: column;
+}
+
+.stars {
+    min-width: 250px;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.star {
+    transition-duration: 0.2s;
+}
+
+.star:hover{
+    cursor: pointer;
+    transform: scale(1.30);
 }

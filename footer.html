@@ -8,6 +8,8 @@
     <title>Footer</title>
 
     <link rel="stylesheet" href="css/footer.css">
+
+    <script src="js/footer.js"></script>
 </head>
 <body>
     <footer>
@@ -21,8 +23,20 @@
             <img src="/images/FirePlay.png" alt="firePlay logo">
         </div>
 
-        <div class="rateUs">
+        <div class="rateUs" id="rating" onclick="handleRating(event)">
+            <h2>Rate us:</h2>
+
+            <div class="stars">
+                <span class="star" data-value="1"><img src="images/star.png" width="30px"></span>
+                <span class="star" data-value="2"><img src="images/star.png" width="30px"></span>
+                <span class="star" data-value="3"><img src="images/star.png" width="30px"></span>
+                <span class="star" data-value="4"><img src="images/star.png" width="30px"></span>
+                <span class="star" data-value="5"><img src="images/star.png" width="30px"></span>
+            </div>
             
+            <div class="avgRating" id="average-rating">
+                <h4>Average Rating: <span id="average">0</span></h4>
+            </div>
         </div>
     </footer>
 </body>
