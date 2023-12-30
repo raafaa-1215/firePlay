@@ -12,11 +12,13 @@ body {
 .body {
     width: 100%;
     min-height: 80vh;
+    padding: 2.5em 0;
     display: flex;
     justify-content: center;
 }
 
 .content {
     width: 75%;
+    background-color: white;
 }
 

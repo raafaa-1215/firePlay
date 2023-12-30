@@ -2,16 +2,19 @@
     margin: 0;
     padding: 0;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+    box-sizing: border-box;
 }
 
 footer {
     width: 100%;
-    padding: 2% 0;
+    padding: 2em;
     background-color: white;
     color: #F45D00;
     border-top: 1px solid #F45D00;
     display: flex;
     justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
 }
 
 footer h2 {
