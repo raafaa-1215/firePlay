@@ -11,7 +11,7 @@ body {
 
 .body {
     width: 100%;
-    min-height: 80vh;
+    min-height: 70vh;
     padding: 2.5em 0;
     display: flex;
     justify-content: center;
@@ -19,6 +19,133 @@ body {
 
 .content {
     width: 75%;
+    padding: 3em;
     background-color: white;
+    display: flex;
+    justify-content: space-between;
 }
 
+.profilePicture {
+    width: 40%;
+}
+
+.profileInfo {
+    width: 50%;
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.profileInfo form {
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+}
+
+.input {
+    width: 48%;
+    margin-bottom: 3em;
+}
+
+.input h2 {
+    margin-bottom: .5em;
+}
+
+.butons {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.changePassBtn, .editProfileBtn {
+    width: 30%;
+    padding: 1em;
+    background-color: white;
+    border-radius: 3px;
+    transition-duration: 0.2s;
+}
+
+.changePassBtn:hover, .editProfileBtn:hover {
+    cursor: pointer;
+    transform: scale(1.10);
+}
+
+.changePassBtn {
+    color: #F45D00;
+    font-weight: bold;
+    border: 2px solid #F45D00;
+}
+
+.changePassBtn:hover {
+    color: white;
+    font-weight: bold;
+    background-color: #F45D00;
+}
+
+.editProfileBtn {
+    color: #4169E1;
+    font-weight: bold;
+    border: 2px solid #4169E1;
+}
+
+.editProfileBtn:hover {
+    color: white;
+    font-weight: bold;
+    background-color: #4169E1;
+}
+
+/* responsividade */
+@media screen and (max-width: 1100px) {
+    .input {
+        width: 100%;
+        margin-bottom: 2em;
+    }
+
+    .butons {
+        flex-direction: column;
+    }
+
+    .changePassBtn, .editProfileBtn {
+        width: 100%;
+        margin-bottom: 1.5em;
+    }
+}
+
+@media screen and (max-width: 890px) {
+    .content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .profilePicture {
+        width: 100%;
+        margin-bottom: 2em;
+    }
+
+    .profileInfo {
+        width: 100%;
+        height: fit-content;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .input {
+        width: 50%;
+        margin-bottom: 3em;
+    }
+    
+}
+
+@media screen and (max-width: 650px) {
+    .profileInfo form{
+        text-align: center;
+    }
+    
+    .input {
+        width: 100%;
+        margin-bottom: 2em;
+    }
+}
