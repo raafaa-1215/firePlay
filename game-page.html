@@ -3,24 +3,121 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>User Rating System</title>
-    <link rel="stylesheet" href="styles.css">
+    
+    <title>FirePlay</title>
+
+    <link rel="stylesheet" href="css/game-page.css">
+
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script>
+        $(function() {
+            $("#header").load("header.html");
+            $("#footer").load("footer.html");
+        });
+    </script>
 </head>
+
 <body>
+    <div id="header"></div>
 
-<h1>User Rating System</h1>
 
-<div class="rating" id="rating" onclick="handleRating(event)">
-    <span class="star" data-value="1">&#9733;</span>
-    <span class="star" data-value="2">&#9733;</span>
-    <span class="star" data-value="3">&#9733;</span>
-    <span class="star" data-value="4">&#9733;</span>
-    <span class="star" data-value="5">&#9733;</span>
+<div class="container">
+
+<section class="one">
+    <div class="body">
+        <div class="content">
+            
+            <div class="gamepicture">
+                <img src="images/cs2.png" alt="Profile Picture" width="100%">
+            </div>
+
+            <div class="gameinfo">
+                <form>
+                    <div class="input">
+                        <h2>Data de lançamento:</h2>
+                        <h4>27/09/2023</h4>
+                    </div>
+
+                    <div class="input">
+                        <h2>Denvolvedor</h2>
+                        <input type="hidden" name="bithday" id="birthday" placeholder="">
+                        <h4>Valve</h4>
+                    </div>
+
+                    <div class="input">
+                        <h2>Faixa Etaria</h2>
+                        <input type="hidden" name="gender" id="gender" placeholder="">
+                        <h4>+18</h4>
+                    </div>
+                    
+                    <div class="input">
+                        <h2>Categoria de Jogo</h2>
+                        <input type="hidden" name="favorite_game" id="favorite_game" placeholder="">
+                        <h4>Fps</h4>
+                    </div>
+                    
+                    <div class="input">
+                        <h2>Requisitos Mínimos:</h2>
+                    
+                        <ol>
+                          <u>Sistema Operacional: Windows 10/11 (64-bit)</u> </ol><br></br>
+                          <u>Processador: com 4 threads físicas — Intel® Core™ i5 750 ou superior</u> <br></br> 
+                          <u>Memória: 8 GB de RAM</u>  <br></br>
+                          <u>Placa de vídeo: A placa de vídeo deve ter 1 GB ou mais de memória, e ser compatível com DirectX 11 e Shader Model 5.0 </u> <br></br> 
+                          <u>DirectX: Versão 11</u>  <br></br>
+
+                        <u>Armazenamento: 85 GB de espaço disponível</u>
+                        </ol>
+                    </div>
+
+                </form>
+                
+              
+            </div>
+        </div>
+    </div>
+
+</section>
+
+<section class="two">
+    <br>
+ 
+    <div class="body">
+        <div class="content2">
+             <div class="gameinfo">
+            
+<ul>
+    <h1>Mais sobre o Jogo</h1>
+    <br>O Counter‑Strike 2 é uma atualização gratuita para o CS:GO e representa o maior avanço técnico na história do Counter‑Strike. Criado no motor de jogo Source 2, o Counter‑Strike 2 é uma versão modernizada com renderização à base da física, comunicação em rede de ponta e ferramentas do Workshop melhoradas.</br>
+    <br>Para além da jogabilidade clássica centrada em objetivos que o Counter‑Strike deu a conhecer ao mundo em 1999, o Counter‑Strike 2 inclui:</br>
+    <br>
+    
+<p><li>Um novo Rating CS no modo Premier atualizado.</li></p>
+<li>Tabelas de classificação globais e regionais.</li>
+<li>Mapas melhorados e remodelados.</li>
+<li>Granadas de fumo dinâmico, capazes de mudar por completo o rumo das partidas.</li>
+<li>Jogabilidade independente do tickrate do servidor.</li>
+<li>Sons e efeitos visuais renovados.</li>
+<li>Todos os itens do CS:GO estão disponíveis no CS2.</li>
+</ul>
+                         
+            </div>
+
+            <div class="videoContainer">
+                <video width="100%" height="auto" controls>
+                    <source src="videos/cs2.mp4" type="video/mp4" >
+                    Seu navegador não suporta o elemento de vídeo.
+                </video>
+            </div>
+
+        
+        </div>
+        
+    </div>
+<div id="footer"></div>
+</section>
+
 </div>
-
-<div id="average-rating">Average Rating: <span id="average">0</span></div>
-
-<script src="Js/script.js"></script>
 
 </body>
 </html>
