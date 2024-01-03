@@ -1,20 +1,17 @@
-@media (min-width: 740px) and (max-width: 1240px) {
-  .ast-page-builder-template .site-content > .ast-container {
-  padding: 0px 20px 0px 20px;
-  }}
-
-* {
+*{
   margin: 0;
   padding: 0;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 .container {
-scroll-snap-type: y mandatory;
-overflow-y: scroll;
-height: 100vh;
+  scroll-snap-type: y mandatory;
+  overflow-y: scroll;
+  height: 100vh;
+  
+  }
 
-}
+
 section{
   height: 100vh;
   justify-content: center;
@@ -40,7 +37,6 @@ body {
 }
 
 
-
 .body {
   width: 100%;
   min-height: 70vh;
@@ -48,12 +44,11 @@ body {
   display: flex;
     justify-content: center;
 
-
 }
 
 .content {
   width: 80%;
-  padding: 2em;
+  padding: 3em;
   background-color: white;
   display: flex;
   justify-content: space-between;
@@ -61,15 +56,17 @@ body {
 }
 
 
-
 .content2 {
-  width: 70%;
+  width: 80%;
   padding: 3em;
   display: flex;
   justify-content: space-between;
   background-image: url("https://whatifgaming.com/wp-content/uploads/2023/10/CS2.png");
-
+  text-shadow: 1px 1px 4px gray;
+  font-size: 20px;
 }
+
+
 .gamepicture {
   width: 40%;
  
@@ -96,8 +93,9 @@ margin-top: auto;
 }
 
 .input {
-  width: 48%;
+  width: 60%;
   margin-bottom: 3em;
+  font-size: 15px;
 }
 
 .input h2 {
@@ -114,5 +112,57 @@ margin-top: auto;
 }
 
 
+@media screen and (max-width: 1100px) {
+.input {
+    width: 100%;
+    margin-bottom: 2em;
+}
 
 
+}
+
+@media screen and (max-width: 890px) {
+.content {
+    flex-direction: column;
+    align-items: center;
+}
+
+.content2{
+flex-direction: column;
+align-items: center;
+
+}
+.gamepicture {
+    width: 100%;
+    margin-bottom: 2em;
+}
+
+.gameinfo {
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+}
+
+.input {
+    width: 50%;
+    margin-bottom: 3em;
+}
+
+.videoContainer{
+  width: 100%;
+  margin-bottom: 2em;
+}
+
+}
+
+@media screen and (max-width: 650px) {
+.gameinfo form{
+    text-align: center;
+}
+
+.input {
+    width: 100%;
+    margin-bottom: 2em;
+}
+}
