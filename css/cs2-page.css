@@ -23,6 +23,8 @@ section{
 
 }
 
+
+
 h1{
 color:  #000;
 text-shadow: 1px 1px 4px white;
@@ -41,7 +43,7 @@ body {
 
 .body {
   width: 100%;
-  min-height: 80vh;
+  min-height: 70vh;
   padding: 2.5em 0;
   display: flex;
     justify-content: center;
@@ -51,19 +53,20 @@ body {
 
 .content {
   width: 80%;
-  padding: 3em;
+  padding: 2em;
   background-color: white;
   display: flex;
   justify-content: space-between;
  
 }
 
+
+
 .content2 {
-  width: 80%;
+  width: 70%;
   padding: 3em;
   display: flex;
   justify-content: space-between;
- 
   background-image: url("https://whatifgaming.com/wp-content/uploads/2023/10/CS2.png");
 
 }
@@ -79,7 +82,7 @@ body {
   flex-direction: column;
   justify-content: space-between;
   font-family: Stratum2,sans-serif;
-  font-size: 20px;
+  font-size: 85%;
 margin-top: auto;
 }
 
