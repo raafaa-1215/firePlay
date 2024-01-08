@@ -26,3 +26,151 @@ body {
     display: flex;
     flex-direction: column;
 }
+
+.title {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 5em;
+}
+
+.title h1 {
+    color: #F45D00;
+    margin-bottom: 1em;
+}
+
+.usersTable {
+    width: 100%;
+    height: 500px;
+    overflow-y: scroll;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 5em;
+}
+
+.usersTable table {
+    width: 80%;
+    border: none;
+    border-collapse: collapse;
+}
+
+.usersTable tr:hover {
+    background-color: #eeeeee;
+}
+
+.usersTable table th {
+    padding: 1em;
+    text-align: start;
+    border-bottom: 1px solid grey;
+}
+
+.usersTable table td {
+    padding: 1em;
+    border-bottom: 1px solid grey;
+}
+
+.addFriendBtn {
+    width: 90%;
+    padding: .5em;
+    background-color: white;
+    border-radius: 3px;
+    transition-duration: 0.2s;
+    color: #159f23;
+    font-weight: bold;
+    border: 2px solid #159f23;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.reportBtn {
+    width: 90%;
+    padding: .5em;
+    background-color: white;
+    border-radius: 3px;
+    transition-duration: 0.2s;
+    color: #db1818;
+    font-weight: bold;
+    border: 2px solid #db1818;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.addFriendBtn img, .reportBtn img {
+    transition-duration: 0.2s;
+}
+
+.addFriendBtn:hover, .reportBtn:hover {
+    cursor: pointer;
+    transform: scale(1.10);
+}
+
+.addFriendBtn:hover {
+    color: white;
+    background-color: #159f23;
+}
+
+.addFriendBtn:hover > img {
+    filter: grayscale(100%) brightness(0%) invert(100%);
+}
+
+.reportBtn:hover {
+    color: white;
+    background-color: #db1818;
+}
+
+.reportBtn:hover > img {
+    filter: grayscale(100%) brightness(0%) invert(100%);
+}
+
+.report {
+    width: 100%;
+}
+
+.reportTitle {
+    width: 100%;
+    text-align: justify;
+    color: #db1818;
+}
+
+.reportTitle h3 {
+    color: white;
+    padding: 2em;
+    background-color: #db1818;
+    border-radius: 2px;
+    margin-bottom: 2em;
+}
+
+.reportTitle a {
+    color: #4169E1;
+}
+
+.report form {
+    width: 100%;
+    padding: 1em 5em;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+}
+
+.input {
+    width: 100%;
+    padding: 1em 0;
+    display: flex;
+}
+
+.input label {
+    width: 20%;
+    margin-left: 20%;
+    font-weight: bold;
+}
+
+.input input, .input select,.input textarea  {
+    width: 50%;
+    padding: .5em;
+    border: 1px solid grey;
+    border-radius: 2px;
+    resize: none;
+}
+
+/* responsividade */
