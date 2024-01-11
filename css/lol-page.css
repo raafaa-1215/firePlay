@@ -33,7 +33,9 @@ body {
   width: 100%;
   background-color: #4169E1;
   min-height: 100vh;
-
+  background-image: url("https://mir-s3-cdn-cf.behance.net/project_modules/1400/9112b576009313.5c5ca8e8c45c3.jpg");
+    background-repeat: no-repeat;
+  background-size: 100% 100%;
 }
 
 
@@ -99,7 +101,7 @@ align-items: center;
 }
 
 .input {
-  width: 48%;
+  width: 60%;
   margin-bottom: 2em;
   align-items: right;
 }
