@@ -82,6 +82,32 @@ header .conta a:hover img {
     border: 2px solid #4169E1;
 }
 
+header .login {
+    width: 20%;
+    margin-right: 2em;
+}
+
+header .login a {
+    text-decoration: none;
+    color: black;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+header .login a h4 {
+    transition-duration: 0.3s;
+}
+
+header .login a img {
+    margin-left: 2em;
+    border-radius: 50px;
+}
+
+header .login a:hover h4{
+    transform: scale(1.20);
+}
+
 header .dropdown {
     display: none;
 }

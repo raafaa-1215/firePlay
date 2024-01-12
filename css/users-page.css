@@ -59,6 +59,10 @@ body {
     background-color: #eeeeee;
 }
 
+.usersTable tr:first-child:hover {
+    background-color: white;
+}
+
 .usersTable table th {
     padding: 1em;
     text-align: start;
