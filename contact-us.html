@@ -8,6 +8,7 @@
     
     <title>Contact Us</title>
     <link rel="stylesheet" href="css/ContactUS.css">
+    <script defer src="js/ContactUS.js" ></script>
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
     <script>
         $(function() {
@@ -15,47 +16,50 @@
             $("#footer").load("footer.html");
         });
     </script>
-</head>
+    <script defer src="js/ContactUS.js"></script>
+    </head>
+
 <body>
   <div id="header"></div>
 
   <div class="container">
-    <form action="submit_form.php" method="post">
+  <form action="submit_form.php" method="post" id="contactForm">
         <h2>Contact Us</h2>
         <div class="form-group">
             <label for="name">Name:</label>
-            <input type="text" id="name" name="name" required>
+            <input type="text" id="name" name="name" >
         </div>
 
         <div class="form-group">
             <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required>
+            <input type="email" id="email" name="email" >
         </div>
 
         <div class="form-group">
             <label for="inquiry-type">Inquiry Type:</label>
-            <select id="inquiry-type" name="inquiry-type" required>
+            <select id="inquiry-type" name="inquiry-type" >
                 <option value="" disabled selected>Select an option</option>
-                <option value="general">Product Information</option>
+                <option value="productInfo">Product Information</option>
                 <option value="support">Technical Support</option>
-                <option value="sales"></option>
+               <!-- Adicionar mais opções de contacto caso seja necessario -->
             </select>
         </div>
 
         <div class="form-group">
-            <label>Additional Options:</label>
+            <label >Additional Options:</label>
             <div class="checkbox-group">
-                <input type="checkbox" id="newsletter" name="newsletter">
                 <label for="newsletter">Subscribe to Newsletter</label>
-
-                <input type="checkbox" id="updates" name="updates">
+                <p></p>
+                <input type="checkbox" id="newsletter" name="newsletter">
                 <label for="updates">Receive Updates</label>
+                <p></p>
+                 <input type="checkbox" id="updates" name="updates">
             </div>
         </div>
 
         <div class="form-group">
             <label for="message">Message:</label>
-            <textarea id="message" name="message" rows="4" required></textarea>
+            <textarea id="message" name="message" rows="4" ></textarea>
         </div>
 
         <div class="form-group">
