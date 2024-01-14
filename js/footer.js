@@ -31,3 +31,7 @@ function calculateAverageRating() {
     const averageRating = numberOfRatings === 0 ? 0 : totalRating / numberOfRatings;
     averageRatingElement.textContent = averageRating.toFixed(1);
 }
+
+function topOfPage() {
+    window.location.href;
+}

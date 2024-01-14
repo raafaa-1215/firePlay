@@ -55,36 +55,41 @@ header .navbar a {
 header .conta {
     width: 20%;
     margin-right: 2em;
+    display: none;
 }
 
-header .conta a {
-    text-decoration: none;
-    color: black;
+header .conta .a {
     display: flex;
     justify-content: flex-end;
     align-items: center;
 }
 
-header .conta a h4 {
+header .conta .a a {
+    text-decoration: none;
+    color: black;
+}
+
+header .conta .a h4 {
     transition-duration: 0.3s;
 }
 
-header .conta a img {
-    margin-left: 2em;
+header .conta .a img {
+    margin-right: 2em;
     border-radius: 50px;
 }
 
-header .conta a:hover h4{
+header .conta h4:hover {
     transform: scale(1.20);
 }
 
-header .conta a:hover img {
-    border: 2px solid #4169E1;
+header .conta img:hover {
+    border: 1px solid #4169E1;
 }
 
 header .login {
     width: 20%;
     margin-right: 2em;
+    display: block;
 }
 
 header .login a {
@@ -131,11 +136,11 @@ header .dropdown-content a {
     border-bottom: 1px solid #F45D00;
 }
 
-header .dropdown:hover {
+header .dropdown img:hover {
     cursor: pointer;
 }
 
-header .dropdown:hover .dropdown-content {
+header .dropdown img:hover + .dropdown-content {
     display: block;
 }
 

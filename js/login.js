@@ -8,9 +8,8 @@ document.addEventListener('DOMContentLoaded', function () {
             var username = document.getElementById('username').value;
             var password = document.getElementById('password').value;
 
-            var hashedPass = hashPassword(password);
+            setLoginData(username, password);
 
-            setLoginData(username, hashedPass);
             window.location.href = 'index.html';
         }
     });
@@ -26,7 +25,7 @@ document.addEventListener('DOMContentLoaded', function () {
             alert('Please enter your username.');
         } else if (!isValidUsername(username)) {
             isValid = false;
-            alert('Please enter a valid username.\nNo offensivve words are allowed.');
+            alert('Please enter a valid username.\nNo offensivve words are allowed.\nMust be at least 4 characters long.');
         } else {
             if (password.trim() === '') {
                 isValid = false;
@@ -40,7 +39,7 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     function isValidUsername(username) {
-        var usernameRegex = /^\b(?!nigger|nigga|retarded\b)[a-zA-Z0-9_]+\b$/;
+        var usernameRegex = /^\b(?!nigger|nigga|retarded\b)[a-zA-Z0-9_-]{4,20}\b$/;
         return usernameRegex.test(username);
     }
 
@@ -52,14 +51,9 @@ document.addEventListener('DOMContentLoaded', function () {
     function setLoginData(username, password) {
         localStorage.setItem("username", username);
         localStorage.setItem("password", password);
-    }
-    
-    function hashPassword(password) {
-        const encoder = new TextEncoder();
-        const data = encoder.encode(password);
-        return crypto.subtle.digest('SHA-256', data).then(hashBuffer => {
-            const hashArray = Array.from(new Uint8Array(hashBuffer));
-            return hashArray.map(byte => byte.toString(16).padStart(2, '0')).join('');
-        });
+        localStorage.setItem("birthday", "undefined");
+        localStorage.setItem("gender", "undefined");
+        localStorage.setItem("favoriteGame", "undefined");
+        localStorage.setItem("favoriteCategory", "undefined");
     }
 });
