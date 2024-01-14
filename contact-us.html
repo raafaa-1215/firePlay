@@ -20,53 +20,53 @@
     </head>
 
 <body>
-  <div id="header"></div>
+    <div id="header"></div>
 
-  <div class="container">
-  <form action="submit_form.php" method="post" id="contactForm">
-        <h2>Contact Us</h2>
-        <div class="form-group">
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="name" >
-        </div>
-
-        <div class="form-group">
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" >
-        </div>
-
-        <div class="form-group">
-            <label for="inquiry-type">Inquiry Type:</label>
-            <select id="inquiry-type" name="inquiry-type" >
-                <option value="" disabled selected>Select an option</option>
-                <option value="productInfo">Product Information</option>
-                <option value="support">Technical Support</option>
-               <!-- Adicionar mais opções de contacto caso seja necessario -->
-            </select>
-        </div>
-
-        <div class="form-group">
-            <label >Additional Options:</label>
-            <div class="checkbox-group">
-                <label for="newsletter">Subscribe to Newsletter</label>
-                <p></p>
-                <input type="checkbox" id="newsletter" name="newsletter">
-                <label for="updates">Receive Updates</label>
-                <p></p>
-                 <input type="checkbox" id="updates" name="updates">
+    <div class="container">
+        <form action="" method="post" id="contactForm">
+            <h2>Contact Us</h2>
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" >
             </div>
-        </div>
 
-        <div class="form-group">
-            <label for="message">Message:</label>
-            <textarea id="message" name="message" rows="4" ></textarea>
-        </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" >
+            </div>
 
-        <div class="form-group">
-            <input type="submit" value="Submit">
-        </div>
-    </form>
-</div>
+            <div class="form-group">
+                <label for="inquiry-type">Inquiry Type:</label>
+                <select id="inquiry-type" name="inquiry-type" >
+                    <option value="" disabled selected>Select an option</option>
+                    <option value="productInfo">Product Information</option>
+                    <option value="support">Technical Support</option>
+                <!-- Adicionar mais opções de contacto caso seja necessario -->
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label >Additional Options:</label>
+                <div class="checkbox-group">
+                    <label for="newsletter">Subscribe to Newsletter</label>
+                    <p></p>
+                    <input type="checkbox" id="newsletter" name="newsletter">
+                    <label for="updates">Receive Updates</label>
+                    <p></p>
+                    <input type="checkbox" id="updates" name="updates">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="4" ></textarea>
+            </div>
+
+            <div class="form-group">
+                <input type="submit" value="Submit">
+            </div>
+        </form>
+    </div>
     <div id="footer"></div>
 </body>
 </html>

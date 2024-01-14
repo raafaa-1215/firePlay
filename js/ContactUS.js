@@ -37,13 +37,11 @@ document.addEventListener('DOMContentLoaded', function () {
         if (message.trim() === '') {
             isValid = false;
             alert('Please enter your message.');
+        } else {
+            alert('Pedido de contacto enviado com sucesso');
+            window.location.href = "index.html";
         }
-else{
-
-  alert('Pedido de contacto enviado com sucesso');
-  window.location.href = "index.html";
-
-}
+        
         return isValid;
     }
 

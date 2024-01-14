@@ -23,7 +23,9 @@ body {
     height: fit-content;
     padding: 0 5em 5em 5em;
     background-color: white;
+    border: 1px solid #4169E1;
     border-radius: 5px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -83,6 +85,7 @@ body {
 
 @media screen and (max-width: 890px) {
     .content {
+        width: 75%;
         padding: 3em;
     }
 
@@ -97,6 +100,7 @@ body {
 
 @media screen and (max-width: 650px) {
     .content {
+        width: 80%;
         padding: 1.5em;
     }
 
