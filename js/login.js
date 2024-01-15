@@ -25,7 +25,7 @@ document.addEventListener('DOMContentLoaded', function () {
             alert('Please enter your username.');
         } else if (!isValidUsername(username)) {
             isValid = false;
-            alert('Please enter a valid username.\nNo offensivve words are allowed.\nMust be at least 4 characters long.');
+            alert('Please enter a valid username.\nNo offensive words are allowed.\nMust be at least 4 characters long.');
         } else {
             if (password.trim() === '') {
                 isValid = false;

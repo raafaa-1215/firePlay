@@ -1,96 +1,138 @@
+document.addEventListener('DOMContentLoaded', function () {
+    var usernameCheck = localStorage.getItem('username');
+
+    if(usernameCheck === null || usernameCheck === undefined) {
+        document.getElementById('notLogedIn').style.display = 'flex';
+        document.getElementById('content').style.display = 'none';
+    } else {
+        document.getElementById('username').textContent = usernameCheck;
+        document.getElementById('birthday').textContent = localStorage.getItem('birthday');
+        document.getElementById('gender').textContent = localStorage.getItem('gender');
+        document.getElementById('favorite_game').textContent = localStorage.getItem('favoriteGame');
+        document.getElementById('favorite-category').textContent = localStorage.getItem('birfavoriteCategory');
+    }
+    
+});
+
+function changePassword() {
+    var pass1 = prompt("Please enter your new password: ");
+
+    if (isValidPassword(pass1.trim())) {
+        var pass2 = prompt("Confirm your new password: ");
+
+        if (pass1 === pass2) {
+            var oldPass = prompt("To confirm the operation, enter your old password: ");
+
+            if (oldPass !== localStorage.getItem('password')) {
+                alert("Old password is incorrect. Try again.");
+            } else {
+                localStorage.setItem('password', pass1);
+                alert("Password changed successfuly!!");
+            }
+        } else {
+            alert("Passwords do not match. Try again.");
+        }
+    } else {
+        alert('Please enter a valid password.\nIt bust be between 6 to 15 characters and " or \' are allowed.');
+    }
+}
+
+function isValidPassword(password) {
+    var passRegex = /^[^"']*.{6,15}[^"']*$/;
+    return passRegex.test(password);
+}
+
 function editProfile() {
-    var saveChanges = document.getElementById('saveChangesBtn');
-    var editProfile = document.getElementById('editProfileBtn');
-    var dontSaveChanges = document.getElementById('dontSaveChangesBtn');
-    var changePass = document.getElementById('changePassBtn');
+    document.getElementById('saveChangesBtn').style.display = 'block';
+    document.getElementById('dontSaveChangesBtn').style.display = 'block';
+    document.getElementById('editProfileBtn').style.display = 'none';
+    document.getElementById('changePassBtn').style.display = 'none';
 
-    saveChanges.style.display = 'block';
-    dontSaveChanges.style.display = 'block';
-    editProfile.style.display = 'none';
-    changePass.style.display = 'none';
+    document.getElementById('username_input').style.display = 'block';
+    document.getElementById('birthday_input').style.display = 'block';
+    document.getElementById('gender_input').style.display = 'block';
+    document.getElementById('favorite_game_input').style.display = 'block';
+    document.getElementById('favorite_category_input').style.display = 'block';
 
-    var usernameInput = document.getElementById('username_input');
-    var birthdayInput = document.getElementById('birthday_input');
-    var genderInput = document.getElementById('gender_input');
-    var favoriteGameInput = document.getElementById('favorite_game_input');
-    var favoriteCategoryInput = document.getElementById('favorite_category_input');
-
-    usernameInput.style.display = 'block';
-    usernameInput.type = 'text';
-    birthdayInput.style.display = 'block';
-    birthdayInput.type = 'date';
-    genderInput.style.display = 'block';
-    genderInput.type = 'text';
-    favoriteGameInput.style.display = 'block';
-    favoriteGameInput.type = 'text';
-    favoriteCategoryInput.style.display = 'block';
-    favoriteCategoryInput.type = 'text';
-
-    var usernameH4 = document.getElementById('username');
-    var birthdayH4 = document.getElementById('birthday');
-    var genderH4 = document.getElementById('gender');
-    var favoriteGameH4 = document.getElementById('favorite_game');
-    var favoriteCategoryH4 = document.getElementById('favorite_category');
-
-    usernameH4.style.display = 'none';
-    birthdayH4.style.display = 'none';
-    genderH4.style.display = 'none';
-    favoriteGameH4.style.display = 'none';
-    favoriteCategoryH4.style.display = 'none';
+    document.getElementById('username').style.display = 'none';
+    document.getElementById('birthday').style.display = 'none';
+    document.getElementById('gender').style.display = 'none';
+    document.getElementById('favorite_game').style.display = 'none';
+    document.getElementById('favorite_category').style.display = 'none';
 }
 
 function saveChanges(index) {
     switch (index) {
         case 1:
             var username = document.getElementById('username_input').value;
-            document.getElementById('username').textContent = username;
-
             var birthday = document.getElementById('birthday_input').value;
-            document.getElementById('birthday').textContent = birthday;
-
             var gender = document.getElementById('gender_input').value;
-            document.getElementById('gender').textContent = gender;
-
             var favorite_game = document.getElementById('favorite_game_input').value;
-            document.getElementById('favorite_game').textContent = favorite_game;
-
             var favorite_category = document.getElementById('favorite_category_input').value;
-            document.getElementById('favorite_category').textContent = favorite_category;
+
+            if (username.trim() === '') {
+                alert('Please enter your username.');
+            } else if (!isValidUsername(username)) {
+                alert('Please enter a valid username.\nNo offensive words are allowed.\nMust be at least 4 characters long.');
+            } else {
+                if (favorite_game !== '' && !isValidGame(favorite_game)) {
+                        alert('Please enter a valid game.');
+                } else {
+                    var result = prompt("Please enter your password to save your changes.");
+                    if (result !== localStorage.getItem('password')) {
+                        alert("Password is incorrect!!");
+                    } else {
+                        setSavedData(username, birthday, gender, favorite_game, favorite_category);
+                    }
+                }        
+            }
 
         default:
-            var saveChanges = document.getElementById('saveChangesBtn');
-            var editProfile = document.getElementById('editProfileBtn');
-            var dontSaveChanges = document.getElementById('dontSaveChangesBtn');
-            var changePass = document.getElementById('changePassBtn');
+            document.getElementById('saveChangesBtn').style.display = 'none';
+            document.getElementById('dontSaveChangesBtn').style.display = 'none';
+            document.getElementById('editProfileBtn').style.display = 'block';
+            document.getElementById('changePassBtn').style.display = 'block';
 
-            saveChanges.style.display = 'none';
-            dontSaveChanges.style.display = 'none';
-            editProfile.style.display = 'block';
-            changePass.style.display = 'block';
+            document.getElementById('username_input').style.display = 'none';
+            document.getElementById('birthday_input').style.display = 'none';
+            document.getElementById('gender_input').style.display = 'none';
+            document.getElementById('favorite_game_input').style.display = 'none';
+            document.getElementById('favorite_category_input').style.display = 'none';
 
-            var usernameInput = document.getElementById('username_input');
-            var birthdayInput = document.getElementById('birthday_input');
-            var genderInput = document.getElementById('gender_input');
-            var favoriteGameInput = document.getElementById('favorite_game_input');
-            var favoriteCategoryInput = document.getElementById('favorite_category_input');
-
-            usernameInput.style.display = 'none';
-            birthdayInput.style.display = 'none';
-            genderInput.style.display = 'none';
-            favoriteGameInput.style.display = 'none';
-            favoriteCategoryInput.style.display = 'none';
-
-            var usernameH4 = document.getElementById('username');
-            var birthdayH4 = document.getElementById('birthday');
-            var genderH4 = document.getElementById('gender');
-            var favoriteGameH4 = document.getElementById('favorite_game');
-            var favoriteCategoryH4 = document.getElementById('favorite_category');
-
-            usernameH4.style.display = 'block';
-            birthdayH4.style.display = 'block';
-            genderH4.style.display = 'block';
-            favoriteGameH4.style.display = 'block';
-            favoriteCategoryH4.style.display = 'block';
+            document.getElementById('username').style.display = 'block';
+            document.getElementById('birthday').style.display = 'block';
+            document.getElementById('gender').style.display = 'block';
+            document.getElementById('favorite_game').style.display = 'block';
+            document.getElementById('favorite_category').style.display = 'block';
         break;
     } 
+}
+
+function isValidUsername(username) {
+    var usernameRegex = /^\b(?!nigger|nigga|retarded\b)[a-zA-Z0-9_-]{4,20}\b$/;
+    return usernameRegex.test(username);
+}
+
+function isValidGame(favorite_game) {
+    var gameRegex = /^\b(?!nigger|nigga|retarded\b)[a-zA-Z0-9_-]\b$/;
+    return gameRegex.test(favorite_game);
+}
+
+function setSavedData(username, birthday, gender, favoriteGame, favoriteCategory) {
+    localStorage.setItem("username", username);
+    document.getElementById('username').textContent = username;
+
+    if (birthday !== '') {
+        localStorage.setItem("birthday", birthday);
+        document.getElementById('birthday').textContent = birthday;
+    } else if (gender !== '') {
+        localStorage.setItem("gender", gender);
+        document.getElementById('gender').textContent = gender;
+    } else if (favoriteGame !== '') {
+        localStorage.setItem("favoriteGame", favoriteGame);
+        document.getElementById('favorite_game').textContent = favoriteGame;    
+    } else if (favoriteCategory !== '') {
+        localStorage.setItem("favoriteCategory", favoriteCategory);
+        document.getElementById('favorite_category').textContent = favoriteCategory;
+    }
 }

@@ -23,7 +23,12 @@
     <div id="header"></div>
 
     <div class="body">
-        <div class="content">
+        <div class="notLogedIn" id="notLogedIn">
+            <h1>You have to be loged in to access this page!!!</h1>
+            <button onclick="window.location.href = 'login.html'">Go to login page</button>
+        </div>
+
+        <div class="content" id="content">
             <div class="profilePicture">
                 <img src="images/user.png" alt="Profile Picture" width="100%">
             </div>
@@ -32,38 +37,55 @@
                 <form>
                     <div class="input">
                         <h2>Username:</h2>
-                        <input type="hidden" name="username" id="username_input">
-                        <h4 id="username">Raafaa</h4>
+                        <input type="text" name="username" id="username_input">
+                        <h4 id="username"></h4>
                     </div>
 
                     <div class="input">
                         <h2>Birthday:</h2>
-                        <input type="hidden" name="birthday" id="birthday_input">
-                        <h4 id="birthday">04/10/2005</h4>
+                        <input type="date" name="birthday" id="birthday_input">
+                        <h4 id="birthday">undefined</h4>
                     </div>
 
                     <div class="input">
                         <h2>Gender:</h2>
-                        <input type="hidden" name="gender" id="gender_input" placeholder="ex.: male/female">
-                        <h4 id="gender">Male</h4>
+                        <select name="gender_input" id="gender_input">
+                            <option value="" selected disabled hidden>. . .</option>
+                            <option value="Male">Male</option>
+                            <option value="Female">Female</option>
+                            <option value="Other">Other</option>
+                            <option value="Prefer not to say">Prefer not to say</option>
+                        </select>
+                        <h4 id="gender">undefined</h4>
                     </div>
                     
                     <div class="input">
                         <h2>Favorite game:</h2>
-                        <input type="hidden" name="favorite_game" id="favorite_game_input" placeholder="ex.: Counter Strike 2">
-                        <h4 id="favorite_game">Geometry Dash</h4>
+                        <input type="text" name="favorite_game" id="favorite_game_input" placeholder="ex.: Counter Strike 2">
+                        <h4 id="favorite_game">undefined</h4>
                     </div>
                     
                     <div class="input">
                         <h2>Favorite category:</h2>
-                        <input type="hidden" name="favorite_category" id="favorite_category_input" placeholder="ex.: Action">
-                        <h4 id="favorite_category">Action</h4>
+                        <select name="favorite_category_input" id="favorite_category_input">
+                            <option value="" selected disabled hidden>. . .</option>
+                            <option value="Action">Action</option>
+                            <option value="MMORPG">MMORPG</option>
+                            <option value="RPG">RPG</option>
+                            <option value="Simulators">Simulators</option>
+                            <option value="Racing">Racing</option>
+                            <option value="Battle royal">Battle royal</option>
+                            <option value="Platformers">Platformers</option>
+                            <option value="Fighting games">Fighting games</option>
+                            <option value="Open world">Open world</option>
+                        </select>
+                        <h4 id="favorite_category">undefined</h4>
                     </div>
                 </form>
                 
                 <div class="butons">
                     <button class="dontSaveChangesBtn" id="dontSaveChangesBtn" onclick="saveChanges(0)">Don't save</button>
-                    <button class="changePassBtn" id="changePassBtn">Change password</button>
+                    <button class="changePassBtn" id="changePassBtn" onclick="changePassword()">Change password</button>
                     <button class="saveChangesBtn" id="saveChangesBtn" onclick="saveChanges(1)">Save changes</button>
                     <button class="editProfileBtn" id="editProfileBtn" onclick="editProfile()">Edit profile</button>
                 </div>
