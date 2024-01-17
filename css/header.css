@@ -140,7 +140,7 @@ header .dropdown img:hover {
     cursor: pointer;
 }
 
-header .dropdown img:hover + .dropdown-content {
+header .dropdown:hover .dropdown-content {
     display: block;
 }
 
