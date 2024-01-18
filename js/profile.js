@@ -114,7 +114,7 @@ function isValidUsername(username) {
 }
 
 function isValidGame(favorite_game) {
-    var gameRegex = /^\b(?!nigger|nigga|retarded\b)[a-zA-Z0-9_-]\b$/;
+    var gameRegex = /^(?!.*(?:nigger|nigga|retarded))(?!.*'$)[\w\d\s~!@#$%&*()-:',.?]{2,50}$/;
     return gameRegex.test(favorite_game);
 }
 
