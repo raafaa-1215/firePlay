@@ -1,37 +1,40 @@
-const stars = document.querySelectorAll('.star');
-const averageRatingElement = document.getElementById('average');
-let totalRating = 0;
-let numberOfRatings = 0;
+$(document).ready(function() {
+    var star1 = document.getElementById('star1');
+    var star2 = document.getElementById('star2');
+    var star3 = document.getElementById('star3');
+    var star4 = document.getElementById('star4');
+    var star5 = document.getElementById('star5');
+    var count = 0;
+    var sum = 0;
 
-function handleRating(event) {
-    const clickedStar = event.target;
-
-    if (clickedStar.classList.contains('star')) {
-        const ratingValue = parseInt(clickedStar.getAttribute('data-value'));
-
-        totalRating += ratingValue;
-        numberOfRatings++;
-
-        updateStars(ratingValue);
-        calculateAverageRating();
-    }
-}
-
-function updateStars(selectedRating) {
-    stars.forEach((star, index) => {
-        if (index < selectedRating) {
-            star.classList.add('active');
-        } else {
-            star.classList.remove('active');
-        }
+    star1.addEventListener('click', function() {
+        addValueToAverage(1);
     });
-}
 
-function calculateAverageRating() {
-    const averageRating = numberOfRatings === 0 ? 0 : totalRating / numberOfRatings;
-    averageRatingElement.textContent = averageRating.toFixed(1);
-}
+    star2.addEventListener('click', function() {
+        addValueToAverage(2);
+    });
 
-function topOfPage() {
-    window.location.href;
-}
+    star3.addEventListener('click', function() {
+        addValueToAverage(3);
+    });
+
+    star4.addEventListener('click', function() {
+        addValueToAverage(4);
+    });
+
+    star5.addEventListener('click', function() {
+        addValueToAverage(5);
+    });
+
+
+    function addValueToAverage(value) {
+        count = count + 1;
+        sum = sum + value;
+
+        var average = sum / count;
+
+        document.getElementById('average').textContent = average.toFixed(2);
+        localStorage.setItem('Average-rating', average.toFixed(2));
+    }
+});

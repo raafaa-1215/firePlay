@@ -3,8 +3,6 @@ $(document).ready(function() {
 
     function checkDisplay() {
         var checkLogin = localStorage.getItem('username');
-
-        console.log(checkLogin);
         
         if (!(checkLogin === null || checkLogin === undefined)) {
             var conta = document.getElementById('conta');
