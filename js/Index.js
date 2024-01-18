@@ -4,18 +4,16 @@ $(document).ready(function () {
 
     $("#searchForm").submit(function (event) {
         event.preventDefault();
-
-        // Get the search term
         var searchTerm = $("#searchBar").val().toLowerCase();
 
-        // Check if the search term matches any game name
-        var gameNames = ["lol", "cs2", "game", "minecraft", "btd6", "terraria", "gd", "cities-skylines", "apex-legends", "elden-ring"];
+        // vai verificar se o texto inserido coincide com algum dos nomes dos jogos no nosso site
+        var gameNames = ["lol", "cs2", "RaibowSixSiege", "minecraft", "btd6", "terraria", "geometryDash", "citiesskylines", "apexLegends", "eldening"];
         var matchingGame = gameNames.find(function (game) {
             return game.includes(searchTerm);
         });
 
         if (matchingGame) {
-            // Redirect to the page with the matching game
+            // Redireciona para a pagina com o nome correspondente à pagina
             window.location.href = matchingGame + "-page.html";
         } else {
             alert("Game not found. Please try again.");

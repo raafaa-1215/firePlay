@@ -12,8 +12,14 @@ body {
     background-color: #4169E1;
     min-height: 100vh;
     background-image: radial-gradient(#4592e6,#2163c4, #201ac9);
-  
+  padding-bottom: 15px;
 
+}
+
+h5{
+
+    color: white;
+    background: rgba(0,0,0,0.5);
 }
 
 .body {
@@ -65,6 +71,7 @@ body {
     transition-duration: 0.3s;
     box-shadow: 0 4px 8px 0 #00000033, 0 6px 20px 0 #00000030;
     border-radius: 10px;
+    background: rgba(0,0,0,0.5);
 }
 
 .card img {
